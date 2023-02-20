@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>GitHub Repositories</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<style>
+		h1 {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			/* updated to align left */
+			color: #fff;
+			background-color: #2a3d4d;
+			padding: 20px;
+			margin: 0;
+		}
+
+		h1 i {
+			font-size: 2rem;
+			margin-right: 10px;
+		}
+
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+		}
+
+		ul {
+			list-style-type: none;
+			padding: 0;
+		}
+
+		li {
+			margin: 20px 0;
+			border: 1px solid #ccc;
+			padding: 20px;
+			border-radius: 10px;
+			text-align: left;
+		}
+
+		li a {
+			color: #2a3d4d;
+			font-size: large;
+			font-weight: bold;
+			text-decoration: none;
+			text-align: left;
+			/* added to align titles to the right */
+			display: block;
+			/* added to make the link fill the entire width of the parent element */
+		}
+
+		p {
+			margin: 10px 0;
+		}
+
+		a {
+			color: #2a3d4d;
+			font-weight: bold;
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		.pagination {
+			display: flex;
+			justify-content: center;
+			margin-top: 20px;
+		}
+
+		.pagination a {
+			color: #fff;
+			background-color: #2a3d4d;
+			padding: 10px;
+			border-radius: 5px;
+			margin: 0 5px;
+		}
+
+		.pagination a:hover {
+			background-color: #3e5c76;
+		}
+
+		.pagination span {
+			color: #ccc;
+			background-color: #fff;
+			padding: 10px;
+			border-radius: 5px;
+			margin: 0 5px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h1><i class="glyphicon glyphicon-folder-open"></i>Top Kubernetes Repositories</h1>
+		<ul>
+			{{range .Repos}}
+			<li>
+				<a href="{{.HTMLURL}}"><i class="glyphicon glyphicon-file"></i>{{.Name}}</a>
+				<p>{{.Description}}</p>
+				<p><i class="glyphicon glyphicon-star"></i> Stars: {{.StargazersCount}}</p>
+			</li>
+			{{end}}
+		</ul>
+		<div class="pagination">
+			{{if gt .Page 1}}
+			<a href="/?page={{.Prev}}">Previous</a>
+			{{end}}
+			{{if lt (len .Repos) 10}}
+			<span>No more results.</span>
+			{{else}}
+			<a href="/?page={{.Next}}">Next</a>
+			{{end}}
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
