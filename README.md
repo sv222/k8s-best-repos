@@ -2,6 +2,8 @@
 
 This is a simple project built with Go (using Gin HTTP web framework) that demonstrates how to use the GitHub API to search for repositories that match certain criteria, and how to display the search results on a web page with pagination.
 
+![Image screenshot](https://github.com/sv222/k8s-best-repos/raw/main/screenshot.png)
+
 ## Installation
 
 1. Clone the repository:
@@ -25,7 +27,12 @@ go mod tidy
 ```
 
 Make sure your access token has the necessary permissions to search for repositories (see GitHub documentation for details).
-4. Start the server: go run main.go
+4. Start the server: 
+
+```shell
+go run main.go
+```
+
 5. Open your web browser and go to <http://localhost:8080>
 
 ## Usage
