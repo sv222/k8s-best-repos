@@ -1,4 +1,4 @@
-# Go-GitHub-API-Project
+# Go-GitHub-API-Search
 
 This is a simple project built with Go that demonstrates how to use the GitHub API to search for repositories that match certain criteria, and how to display the search results on a web page with pagination.
 
@@ -7,7 +7,7 @@ This is a simple project built with Go that demonstrates how to use the GitHub A
 1. Clone the repository:
 
 ```shell
-git clone https://github.com/example/Go-GitHub-API-Project.git
+git clone https://github.com/sv222/k8s-best-repos.git
 ```
 
 3. Install the dependencies:
@@ -30,7 +30,7 @@ Make sure your access token has the necessary permissions to search for reposito
 
 ## Usage
 
-The web page displays a table of the top 10 GitHub repositories that match the following criteria:
+In the current example the web page displays a table of the top 10 GitHub repositories that match the following criteria:
 
 - The repository description includes the word "kubernetes"
 - The repository has more than 100 stars
