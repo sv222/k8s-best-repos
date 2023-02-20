@@ -2,7 +2,7 @@
 
 This is a simple project built with Go (using Gin HTTP web framework) that demonstrates how to use the GitHub API to search for repositories that match certain criteria, and how to display the search results on a web page with pagination.
 
-![Image screenshot](https://github.com/sv222/k8s-best-repos/raw/main/screenshot.png)
+![Image screenshot](https://github.com/sv222/k8s-best-repos/raw/main/screenshot.png | width=60%)
 
 ## Installation
 
