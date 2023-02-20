@@ -1,6 +1,6 @@
-# Go-GitHub-API-Search
+# Best Kubernetes Repos (GitHub-API-Search)
 
-This is a simple project built with Go that demonstrates how to use the GitHub API to search for repositories that match certain criteria, and how to display the search results on a web page with pagination.
+This is a simple project built with Go (using Gin HTTP web framework) that demonstrates how to use the GitHub API to search for repositories that match certain criteria, and how to display the search results on a web page with pagination.
 
 ## Installation
 
@@ -10,13 +10,13 @@ This is a simple project built with Go that demonstrates how to use the GitHub A
 git clone https://github.com/sv222/k8s-best-repos.git
 ```
 
-3. Install the dependencies:
+2. Install the dependencies:
 
 ```shell
 go mod tidy
 ```
 
-1. Create a `config.json` file in the root directory with your GitHub access token in the following format:
+3. Create a `config.json` file in the root directory with your GitHub access token in the following format:
 
 ```json
    {
